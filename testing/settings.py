@@ -25,7 +25,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", default="__your_secret_key__")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["drf-testing.herokuapp.com", "127.0.0.1"]
 
 INTERNAL_IPS = [
     "127.0.0.1",
