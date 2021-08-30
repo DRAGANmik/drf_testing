@@ -8,5 +8,6 @@ router.register("tests", TestViewSet, basename="tests")
 
 
 urlpatterns = [
+
     path("v1/", include(router.urls)),
 ]

@@ -28,14 +28,6 @@ class QuestionTestSerializer(QuestionSerializer):
     answers = AnswerTestSerializer(many=True)
 
 
-# class QuestionItemSerializer(serializers.ModelSerializer):
-#     question = QuestionSerializer()
-#
-#     class Meta:
-#         model = QuestionItem
-#         fields = "__all__"
-
-
 class TestSerializer(serializers.ModelSerializer):
     questions = QuestionTestSerializer(many=True)
 
