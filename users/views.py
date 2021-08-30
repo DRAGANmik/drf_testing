@@ -1,18 +1,19 @@
 from django.contrib.auth import get_user_model
 from rest_framework import permissions, status
 from rest_framework.decorators import action
-from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
+from rest_framework.generics import CreateAPIView
 from rest_framework.mixins import ListModelMixin
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
-
 
 from .serializers import UserDetailSerializer, UserRegisterSerializer
 
 User = get_user_model()
 
+
 class ListViewSet(ListModelMixin, GenericViewSet):
     pass
+
 
 class RegisterApiView(CreateAPIView):
     queryset = User.objects.all()
